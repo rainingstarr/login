@@ -14,17 +14,8 @@ function Login(){
       naverLogin.init();
     };
     
-    const location = useLocation();
-
-    const getNaverToken = () => {
-        if (!location.hash) return;
-        const token = location.hash.split('=')[1].split('&')[0];
-        console.log(token);
-    }
-    
     useEffect(()=>{
         initializeNaverLogin();
-        getNaverToken();
     },[]);
       
 

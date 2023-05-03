@@ -8,19 +8,30 @@ function Login(){
 
     const getNaverToken = () => {
         if (!location.hash) return;
-        const status = {
-            access_token : location.hash.split('=')[1].split('&')[0],
-            state : location.hash.split('=')[2].split('&')[0],
-            token_type : location.hash.split('=')[3].split('&')[0],
-            expires_in : location.hash.split('=')[4].split('&')[0],
-
-        }
-        const token = status.access_token
-        console.log(status);
-        axios.post(`${process.env.REACT_APP_SERVER_API}/user/naver-login`,{
-            token
+      
+        // URL의 해시 값에서 접근 토큰 정보 추출
+        const accessToken = location.hash.split('=')[1].split('&')[0];
+      
+        // 네이버 API 호출
+        axios({
+          method: 'get',
+          url: '/v1/nid/me',
+          headers: {
+            'Authorization': `Bearer ${accessToken}`
+          }
         })
-    }
+          .then((response) => {
+            let data = response.data;
+            alert(`이름 : ${data.response.name} 이메일 : ${data.response.email} 연령대 : ${data.response.age}`);
+          })
+          .catch((error) => {
+            console.log(error);
+          })
+          .then(()=>{
+            window.location.href = '/';
+          })
+          ;
+      }
     
     useEffect(()=>{
         getNaverToken();

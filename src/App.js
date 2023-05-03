@@ -9,7 +9,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Link/>}></Route>
-        <Route path="naverLogin" element={<NaverLogin/>}></Route>
+        <Route path="/naverLogin" element={<NaverLogin/>}></Route>
       </Routes>
     </>
   );
