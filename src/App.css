@@ -1,0 +1,13 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+html{
+  background:#eee;
+}
+.wrap{
+  position:absolute;
+  right:0;
+  top:0;
+  width:500px;
+  height:100vh;
+  padding:100px;
+  background:#fff;
+}
