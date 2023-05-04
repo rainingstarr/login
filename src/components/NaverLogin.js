@@ -3,8 +3,9 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 
-function Login(){
+function NaverLogin(props){
     const location = useLocation();
+    const naver = props.naver;
 
     const getNaverToken = () => {
         if (!location.hash) return;
@@ -22,16 +23,19 @@ function Login(){
         })
           .then((response) => {
             let data = response.data;
-            alert(`이름 : ${data.response.name} 이메일 : ${data.response.email} 연령대 : ${data.response.age}`);
+            const user = {
+              name: data.response.name,
+              email: data.response.email,
+              age: data.response.age
+            }
+            console.log(user);
+            localStorage.setItem('user', JSON.stringify(user));
           })
           .catch((error) => {
             console.log(error);
           })
-          .then(()=>{
-            window.location.href = '/';
-          })
-          ;
-      }
+    }
+
     
     useEffect(()=>{
         getNaverToken();
@@ -50,4 +54,4 @@ function Login(){
     
 }
 
-export default Login;
+export default NaverLogin;
