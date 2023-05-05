@@ -5,7 +5,6 @@ import { useLocation } from "react-router-dom";
 
 function NaverLogin(props){
     const location = useLocation();
-    const naver = props.naver;
 
     const getNaverToken = () => {
         if (!location.hash) return;
