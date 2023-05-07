@@ -36,7 +36,7 @@ function Login(props){
     return(
         <>  
             <div className="wrap">
-                <div>안녕</div>
+                <div>로그인</div>
                 <div id="naverIdLogin"></div>
                 <div id="kakao-login-btn" onClick={loginWithKakao}>
                     <img src="https://k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg" width="222" alt="카카오 로그인 버튼" />

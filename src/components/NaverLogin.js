@@ -1,10 +1,12 @@
 import axios from "axios";
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 function NaverLogin(props){
+    const navigate = useNavigate();
     const location = useLocation();
+    
 
     const getNaverToken = () => {
         if (!location.hash) return;
@@ -29,9 +31,12 @@ function NaverLogin(props){
             }
             console.log(user);
             localStorage.setItem('user', JSON.stringify(user));
+            navigate('/');
           })
           .catch((error) => {
             console.log(error);
+            alert(error);
+            navigate('/');
           })
     }
 
