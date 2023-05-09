@@ -13,31 +13,21 @@ function NaverLogin(props){
       
         // URL의 해시 값에서 접근 토큰 정보 추출
         const accessToken = location.hash.split('=')[1].split('&')[0];
-      
-        // 네이버 API 호출
         axios({
-          method: 'get',
-          url: '/v1/nid/me',
-          headers: {
-            'Authorization': `Bearer ${accessToken}`
+          method: 'post',
+          url: process.env.REACT_APP_NAVER_SERVER_URL,
+          data: {
+            accessToken: accessToken
           }
-        })
-          .then((response) => {
-            let data = response.data;
-            const user = {
-              name: data.response.name,
-              email: data.response.email,
-              age: data.response.age
-            }
-            console.log(user);
-            localStorage.setItem('user', JSON.stringify(user));
-            navigate('/');
-          })
-          .catch((error) => {
-            console.log(error);
-            alert(error);
-            navigate('/');
-          })
+        }).then((response) => {
+          sessionStorage.setItem('user', JSON.stringify(response.data));
+          navigate('/');
+        }).catch((error) => {
+          console.log(error);
+          alert(error);
+          navigate('/');
+        });
+      
     }
 
     

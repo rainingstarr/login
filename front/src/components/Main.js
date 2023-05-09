@@ -6,7 +6,7 @@ function Main(){
     const [userInfo,setUserInfo] = useState(null);
 
     useEffect(()=>{
-        setUserInfo(localStorage.getItem('user'));
+        setUserInfo(sessionStorage.getItem('user'));
     },[]);
     return(
         <>
@@ -16,13 +16,13 @@ function Main(){
 }
 
 function UserInfo(props){
-    const userInfo = JSON.parse(localStorage.getItem('user'));
+    const userInfo = JSON.parse(sessionStorage.getItem('user'));
     return(
         <>
         <div>
-            <div onClick={()=>{localStorage.clear();props.setUserInfo(localStorage.getItem('user'));}}>로그아웃</div>
+            <div onClick={()=>{sessionStorage.clear();props.setUserInfo(sessionStorage.getItem('user'));}}>로그아웃</div>
             <div>이름 : {userInfo.name}</div>
-            <div>이메일 : {userInfo.email}</div>
+            <div>이메일 : {userInfo._id}</div>
             <div>나이 : {userInfo.age}</div>
         </div>
         </>
