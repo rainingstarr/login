@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import axios from "axios";
 
 function Login(props){
     const naver = props.naver;
@@ -15,14 +16,14 @@ function Login(props){
 
     const initializeKaKaoLogin = () => {
         if(!Kakao.isInitialized()){
-            Kakao.init('a0def8921a761ad8f9c1e52a810fab83');
+            Kakao.init(process.env.REACT_APP_KAKAO_CLIENT_ID);
         }
     }
 
 
     function loginWithKakao() {
         Kakao.Auth.authorize({
-        redirectUri: 'http://localhost:3000/KakaoLogin',
+        redirectUri: process.env.REACT_APP_KAKAO_CALLBACK_URL,
         });
     }    
     
@@ -31,12 +32,28 @@ function Login(props){
         initializeKaKaoLogin();
     },[]);
       
+    function login(){
+        const form = document.joinForm;
+        axios({
+            method: 'post',
+            url: process.env.REACT_APP_LOGIN_SERVER_URL,
+            data: {
+                id: form.id.value,
+                pw: form.pw.value,
+            }
+        });
+    }
 
     return(
         <>  
-            <div className="wrap">
+            <div className="wrap">                
                 <div>로그인</div>
-                <div id="naverIdLogin"></div>
+                <form name="joinForm">
+                    <input type="text" placeholder="아이디" name="id"/>
+                    <input type="password" placeholder="비밀번호" name="pw"/>
+                    <div onClick={login} style={{border: 'solid 2px #000' , width : '60px' , margin : '20px 0 0 0' , corsor : 'pointer'}}>로그인</div>
+                </form>
+                <div id="naverIdLogin" style={{marginBottom : 20+'px',marginTop : 20+'px'}}></div>
                 <div id="kakao-login-btn" onClick={loginWithKakao}>
                     <img src="https://k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg" width="222" alt="카카오 로그인 버튼" />
                 </div>                

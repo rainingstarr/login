@@ -16,7 +16,7 @@ function KakaoLogin(props){
 
     const getKakaoToken = () => {
         if (!location.search) return;
-      
+        
         // URL의 해시 값에서 접근 토큰 정보 추출
         const authorizationCode = location.search.split('=')[1].split('&')[0];
         axios({
@@ -27,41 +27,29 @@ function KakaoLogin(props){
             },
             data: {
                 grant_type: 'authorization_code',
-                client_id: 'a0def8921a761ad8f9c1e52a810fab83',
-                redirect_uri: 'http://localhost:3000/KakaoLogin',
+                client_id: process.env.REACT_APP_KAKAO_CLIENT_ID,
+                redirect_uri: process.env.REACT_APP_KAKAO_CALLBACK_URL,
                 code: authorizationCode,
             }  
-        })
-        .then((response) => {
-            console.log(response.data.access_token);
+        }).then((response) => {
             axios({
-                method: 'get',
-                url: 'https://kapi.kakao.com/v2/user/me',
-                headers: {
-                    'Authorization': `Bearer ${response.data.access_token}`,
-                    'Content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+                method: 'post',
+                url: process.env.REACT_APP_KAKAO_SERVER_URL,
+                data: {
+                accessToken: response.data.access_token,
                 }
-            })
-            .then((response) => {
-                let data = response.data;
-                const user ={
-                    name: data.properties.nickname,
-                    email: data.kakao_account.email,
-                    age: data.kakao_account.age_range
-                }
-                console.log(user);
-                localStorage.setItem('user', JSON.stringify(user));
-                navigate('/');
-            })
-            .catch((error) => {
-                console.log(error);
-                alert(error);
-                navigate('/');
-            })
-
-        })
-        .catch((error) => {
-          console.log(error);
+            }).then((response) => {
+            sessionStorage.setItem('user', JSON.stringify(response.data));
+            navigate('/');
+            }).catch((error) => {
+            console.log(error);
+            alert(error);
+            navigate('/');
+            });
+        }).catch((error) => {
+            console.log(error);
+            alert(error);
+            navigate('/');
         });
     }
 
