@@ -20,7 +20,7 @@ function UserInfo(props){
     return(
         <>
         <div>
-            <div onClick={()=>{sessionStorage.clear();props.setUserInfo(sessionStorage.getItem('user'));}}>로그아웃</div>
+            <div style={{cursor:'pointer'}} onClick={()=>{sessionStorage.clear();props.setUserInfo(sessionStorage.getItem('user'));} }>로그아웃</div>
             <div>이름 : {userInfo.name}</div>
             <div>이메일 : {userInfo._id}</div>
             <div>나이 : {userInfo.age}</div>
