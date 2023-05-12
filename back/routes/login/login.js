@@ -4,6 +4,19 @@ const router = express.Router();
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const session = require('express-session');
+const crypto = require('crypto');
+
+// 비밀번호 확인 함수
+const checkPassword = (password, salt, hash) => {
+  return new Promise((resolve, reject) => {
+    crypto.pbkdf2(password, salt, 10000, 64, 'sha512', (err, derivedKey) => {
+      if (err) reject(err);
+      const isMatch = hash === derivedKey.toString('hex');
+      resolve(isMatch);
+    });
+  });
+};
+
 var db;
 const MongoClient = require('mongodb').MongoClient;
 MongoClient.connect(process.env.DB_URL, {useNewUrlParser: true, useUnifiedTopology: true}, function(error, client) {
@@ -37,18 +50,21 @@ passport.use(new LocalStrategy({
   usernameField: 'id',
   passwordField: 'pw',
   session: true,
-  passReqToCallback: true,
-}, function (req,입력한아이디, 입력한비번, done) {
+  passReqToCallback: false,
+}, function (입력한아이디, 입력한비번, done) {
   db.collection('generalUser').findOne({_id: 입력한아이디}, function (에러, 결과) {
     if (에러) return done(에러);
     if (!결과) {
       return done(null, false,console.log('존재하지않는 아이디요'));
     }
-    if (입력한비번 == 결과.pw) {
-      return done(null, 결과);
-    } else {
-      return done(null, false,console.log('비번틀렸어요'));
-    }
+    checkPassword(입력한비번, 결과.salt, 결과.pw)
+    .then(function(result){
+      if(result){
+        return done(null, 결과);
+      }else{
+        return done(null, false,console.log('비번틀렸어요'));
+      }
+    });
   });
 }));
 

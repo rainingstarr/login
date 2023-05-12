@@ -36,6 +36,9 @@ function Login(props){
             url: 'http://localhost:8080/visitor',
         }).then((response) => {
             console.log(response.data);
+            if(response.data.today === undefined){
+                response.data.today = 1;
+            }
             setVisitor(response.data);
         }).catch((error) => {
             console.log(error);

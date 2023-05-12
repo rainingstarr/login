@@ -62,11 +62,6 @@ app.get('/visitor',function(req,res){
       console.log({today: todayVisitor, total: totalVisitor});
       res.status(200).json({today: todayVisitor, total: totalVisitor});  
     });
-    
-
   });
-    
-
-  
 });
 //--------------------visitor--------------------
