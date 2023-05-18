@@ -6,6 +6,7 @@ import NaverLogin from './components/NaverLogin.js';
 import KakaoLogin from './components/KakaoLogin.js';
 import Main from './components/Main.js';
 import Join from './components/Join.js'
+import Draft from './components/Draft.js';
 
 function App() {
   const [naver]=useState(window.naver);
@@ -18,6 +19,7 @@ function App() {
         <Route path="/naverLogin" element={<NaverLogin naver={naver}/>}></Route>
         <Route path="/KakaoLogin" element={<KakaoLogin Kakao={Kakao}/>}></Route>
         <Route path="/Join" element={<Join/>}></Route>
+        <Route path="/draft" element={<Draft/>}></Route>
       </Routes>
     </>
   );
