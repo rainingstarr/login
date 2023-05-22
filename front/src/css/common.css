@@ -1,0 +1,114 @@
+header, footer{
+    margin: 0 240px;
+}
+/* header */
+.header_bg {
+    position: absolute; z-index: 9; width: 100%;
+}
+header {
+    position: relative;
+    height: 100px;
+    display: flex; flex-flow: row nowrap; justify-content: center;
+    align-items: end;
+}
+
+header h1 {}
+/* header menu */
+.menu {
+    overflow: hidden;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    max-width: 0;
+    transition: 0.5s ease;
+    z-index: 1;
+}
+.menu .menu_contents {
+    width: 130px; padding: 50px 30px;
+    background-color: rgba(0,0,0,0.5);
+}
+.menu .menu_contents li {margin-bottom: 20px;}
+.menu .menu_contents li:nth-child(2) {margin-bottom: 3px;}
+.menu .menu_contents li:nth-child(4) {margin-bottom: 0;}
+.menu .menu_contents li a {color: #fff;}
+
+.burger-icon {
+cursor: pointer;
+display: inline-block;
+position: absolute;
+z-index: 2;
+padding: 8px 0;
+bottom: 4px;
+left: 4px;
+user-select: none;
+width: auto;
+margin: 0;
+}
+
+.burger-icon .burger-sticks {
+background: #fff;
+display: block;
+height: 2px;
+position: relative;
+transition: background .2s ease-out;
+width: 25px;
+}
+
+.burger-icon .burger-sticks:before,
+.burger-icon .burger-sticks:after {
+background: #fff ;
+content: '';
+display: block;
+height: 100%;
+position: absolute;
+transition: all .2s ease-out;
+width: 100%;
+}
+
+.burger-icon .burger-sticks:before {
+top: 7px;
+}
+
+.burger-icon .burger-sticks:after {
+top: -7px;
+}
+
+.burger-check {
+display: none;
+}
+
+.burger-check:checked~.menu {
+max-width: 130px;
+}
+
+.burger-check:checked~.burger-icon .burger-sticks {
+background: transparent;
+}
+
+.burger-check:checked~.burger-icon .burger-sticks:before {
+transform: rotate(-45deg);
+}
+
+.burger-check:checked~.burger-icon .burger-sticks:after {
+transform: rotate(45deg);
+}
+
+.burger-check:checked~.burger-icon:not(.steps) .burger-sticks:before,
+.burger-check:checked~.burger-icon:not(.steps) .burger-sticks:after {
+top: 0;
+}
+/* footer */
+.footer_bg {}
+footer {text-align: center; padding: 15px 0 ;}
+.footer_info {}
+.footer_info li {}
+.footer_info li:last-child {margin-right: 0;}
+.footer_link {}
+.footer_link li {}
+.footer_link li, .footer_info li {display: inline-block; margin-right: 20px;}
+.footer_info li:last-child, .footer_link li:last-child {margin-right: 0;}
+.footer_link li a {font-weight: 500;}
+footer p {}
+.footer_link, .footer_info{margin-bottom: 10px;}
+.footer_info li, footer p, address { color: #898989;} 
+

@@ -1,0 +1,54 @@
+html, body {min-width: 1200px;}
+/* main */
+.wrap1_bg {
+    background-image: url(../../public/images/mainbnr.jpg); background-size: cover;
+    background-position: bottom; height: 100vh;
+    transition: background-image 250ms ease ;
+}
+.wrap1 {position: relative; height: 100%;}
+.wrap1 h2 {
+    color: #fff; font-size: 40px; position: absolute; left: 50%; top: 32%;
+    transform: translateX(-50%); font-weight: 600;
+}
+.wrap1 .wrap1_info {
+    width: 100%;padding: 0 240px;
+    position: absolute; bottom: 3%;left: 0;
+    display: flex; flex-flow: row nowrap; justify-content: space-between;
+}
+.wrap1 .wrap1_info li {
+    position: relative;
+    height: 50px; width: 32%; 
+    display: inline-block; 
+    outline-style: 5px solid #fff;
+}
+.wrap1 .wrap1_info li .desc{
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    left: 0;
+    box-shadow: 0 2px #fff;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    padding: 16px;
+    overflow: hidden;
+    transition: height 250ms ease, box-shadow 250ms ease;
+}
+.wrap1 .wrap1_info li .desc::after{ content: ''; position: absolute; right: -15px; top:-15px;
+    width:0; height:0;  transform:rotate(45deg); transition:all 250ms ease-out; background:#fff;
+}
+.wrap1 .wrap1_info li .desc:hover::after{width:30px; height:30px;}
+.wrap1 .wrap1_info li .desc h3 {
+    font-size: 20px ; margin-bottom: 30px;;
+    text-align: center;
+}
+.wrap1 .wrap1_info li .desc:hover h3 {font-size: 25px; text-align: left; } 
+.wrap1 .wrap1_info li .desc:hover {height: 200px;
+    box-shadow: 0 28px #fff;} 
+.wrap1 .wrap1_info li p {line-height: 1.6; font-size: 18px;}
+.wrap1 .wrap1_info li h3,
+.wrap1 .wrap1_info li p {color: #fff;}
+/* 클래스 추가 */
+.active {}
+.change_bg1 {background-image: url(../../public/images/changebg2.jpg )  !important;}
+.change_bg2 {background-image: url(../../public/images/changebg1.png )  !important;}
+.change_bg3 {background-image: url(../../public/images/changebg3.jpg )  !important;}

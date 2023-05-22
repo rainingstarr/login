@@ -10,7 +10,7 @@ function Main(){
     },[]);
     return(
         <>
-            {userInfo === null ? <Link to="/Login">로그인 하러가기</Link>:<UserInfo setUserInfo={setUserInfo}/>}
+            {userInfo === null ? <div><Link to="/Login">로그인 하러가기</Link> <Link to="/landing">랜딩페이지로 가기</Link></div>:<UserInfo setUserInfo={setUserInfo}/>}
         </>
     )
 }
