@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import Dots from "./Dots";
 import '../css/common.css';
 import '../css/main.css';
 import Section01 from "./sections/Section01";
@@ -43,18 +42,13 @@ function Fullpage() {
       const newScrollIndex =
         (scrollIndex + scrollIndexChange + pages.length - 1) % pages.length + 1;//페이지 순환 (마지막 페이지에서 내리면 위로올라가는걸 만들기위한 노~력)
 
-      const scrollToTop =
-        pageHeight * (newScrollIndex - 1)
-      outerDivRef.current.scrollTo({
-        top: scrollToTop,
-        left: 0,
-        behavior: "smooth",
-      });
+      const scrollToTop = pageHeight * (newScrollIndex - 1);
+      outerDivRef.current.style = `transform: translateY(-${scrollToTop}px)`;
       setScrollIndex(newScrollIndex);
       if(newScrollIndex == 1){
-        outerDivRef.current.classList.add("white");
+        outerDivRef.current.parentElement.classList.add("white");
       }else{
-        outerDivRef.current.classList.remove("white");
+        outerDivRef.current.parentElement.classList.remove("white");
       }
       setTimeout(() => {
         scrolling = false;
@@ -72,15 +66,16 @@ function Fullpage() {
   }, [scrollIndex]);
 
   return (
-    <div ref={outerDivRef} className="outer white">
-      <Header/>
-      <Dots scrollIndex={scrollIndex} pagesLength={pages.length} />
-      {pages.map((page, index) => (
-        <div key={page.id}>
-          {page.content}
-        </div>
-      ))}
-    </div>
+    <>
+      <Header scrollIndex={scrollIndex} pagesLength={pages.length}/>
+      <div ref={outerDivRef} className="outer white">
+        {pages.map((page, index) => (
+          <div key={page.id}>
+            {page.content}
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 

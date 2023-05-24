@@ -27,15 +27,15 @@ header {
     display: flex; flex-flow: row nowrap; justify-content: center;
     align-items: end;
 }
-header .line{position:fixed; left:194px; top:0; width:1px; height:100vh; background:#000;}
+header .line{position:fixed; left:36px; top:0; width:1px; height:100vh; background:#000;}
 
 header h1 {opacity:0; pointer-events:none; transition: 250ms ease-out; transition-delay:250ms;}
-.outer.white header h1 {opacity:1; pointer-events:auto; transition: 250ms ease-out; transition-delay:50ms;}
+#root.white header h1 {opacity:1; pointer-events:auto; transition: 250ms ease-out; transition-delay:50ms;}
 /* header menu */
-.outer .dots_con .dots .dot{width:10px; height:10px; margin:5px; border:1px solid #000; border-radius:50%; transition: background 250ms ease-out;}
-.outer .dots_con .dots .dot.active{background:#000;}
-.outer.white .dots_con .dots .dot.active{background:#fff;}
-.outer.white .dots_con .dots .dot{border: 1px solid #fff; border-radius:50%; transition:background 250ms ease-out;}
+#root .dots_con .dots .dot{width:10px; height:10px; margin:5px; border:1px solid #000; border-radius:50%; transition: background 250ms ease-out;}
+#root .dots_con .dots .dot.active{background:#000;}
+#root.white .dots_con .dots .dot.active{background:#fff;}
+#root.white .dots_con .dots .dot{border: 1px solid #fff; border-radius:50%; transition:background 250ms ease-out;}
 .menu {
     overflow: hidden;
     position: absolute;
@@ -86,9 +86,9 @@ position: absolute;
 transition: all .2s ease-out;
 width: 100%;
 }
-.outer.white .burger-icon .burger-sticks,
-.outer.white .burger-icon .burger-sticks:before,
-.outer.white .burger-icon .burger-sticks:after{
+#root.white .burger-icon .burger-sticks,
+#root.white .burger-icon .burger-sticks:before,
+#root.white .burger-icon .burger-sticks:after{
     background: #fff;
 }
 
@@ -147,7 +147,7 @@ footer p {}
   
 .outer {
     height: 100vh;
-    overflow-y: auto;
+    transition:transform 500ms ease-out;
 }
   
   /* 화면에서 스크롤바 안보이게 */
