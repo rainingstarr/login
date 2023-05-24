@@ -21,7 +21,7 @@ function App() {
         <Route path="/Login" element={<Login naver={naver} Kakao={Kakao}/>}></Route>
         <Route path="/naverLogin" element={<NaverLogin naver={naver}/>}></Route>
         <Route path="/KakaoLogin" element={<KakaoLogin Kakao={Kakao}/>}></Route>
-        <Route path="/Join" element={<Join/>}></Route>
+        <Route path="/join" element={<Join/>}></Route>
         <Route path="/draft" element={<Draft/>}></Route>
         <Route path="/landing" element={<Fullpage/>}></Route>
       </Routes>

@@ -7,7 +7,7 @@ const Dot = ({ num, scrollIndex }) => {
   
   const Dots = ({ scrollIndex ,pagesLength}) => {
     return (
-      <div className="dots_con" style={{ position: "fixed", top: "50%", right: 100, transform:'translateY(-50%)',zIndex:9999 }}>
+      <div className="dots_con" style={{ position: "fixed", top: "50%", left: 100, transform:'translateY(-50%)',zIndex:9999 }}>
         <div className="dots"
           style={{
             display: "flex",

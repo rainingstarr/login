@@ -3,6 +3,7 @@ function Header(){
     return(
         <div className="header_bg">
             <header>
+                <div className="line"></div>
                 <input className="burger-check" type="checkbox" id="burger-check" />
                 <label className="burger-icon" htmlFor="burger-check">
                 <span className="burger-sticks"></span>

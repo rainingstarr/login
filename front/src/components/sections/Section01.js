@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import '../css/common.css';
-import '../css/main.css';
 function Section01 () {
     const [bgClass, setBgClass] = useState('');
     var timeoutId = null;

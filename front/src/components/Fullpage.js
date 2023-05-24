@@ -2,17 +2,20 @@ import { useState, useEffect, useRef } from "react";
 import Dots from "./Dots";
 import '../css/common.css';
 import '../css/main.css';
-import Section01 from "./Section01";
-import Section02 from "./Section02";
-import Section03 from "./Section03";
+import Section01 from "./sections/Section01";
+import Section02 from "./sections/Section02";
+import Section03 from "./sections/Section03";
+import Section04 from "./sections/Section04";
+import Section05 from "./sections/Section05";
+import Section06 from "./sections/Section06";
 import Header from "./Header";
 const pages = [
-  { id: 1, content: <Section01/> },
-  { id: 2, content: <Section02/> },
+  { id: 1, content: <Section01/>},
+  { id: 2, content: <Section02/>},
   { id: 3, content: <Section03/>},
-  { id: 4, content: <div className='section_04 sections'><div className='width_con'>section_04</div></div> },
-  { id: 5, content: <div className='section_05 sections'><div className='width_con'>section_05</div></div> },
-  { id: 6, content: <div className='section_06 sections'><div className='width_con'>section_06</div></div> },
+  { id: 4, content: <Section04/>},
+  { id: 5, content: <Section05/>},
+  { id: 6, content: <Section06/>},
 ];
 let scrolling;
 
@@ -22,6 +25,7 @@ function Fullpage() {
   useEffect(() => {
     const wheelHandler = (e) => {
       e.preventDefault();
+      if(scrolling) return;
       const map = outerDivRef.current.querySelector('.section_03 .map');
       const mapWidth = map.offsetWidth;
       const pageWidth = window.innerWidth;
@@ -34,7 +38,6 @@ function Fullpage() {
           return false;
         }
       }
-      if(scrolling) return;
       scrolling = true;
       const scrollIndexChange = deltaY > 0 ? 1 : -1;//휠다운이냐 휠업이냐
       const newScrollIndex =

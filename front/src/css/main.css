@@ -54,26 +54,44 @@ html, body {min-width: 1200px;}
 .change_bg3 {background-image: url(../../public/images/changebg3.jpg )  !important;}
 /*----------------------------------section01-----------------------------------------------------------------------------------------------------*/
 
-.sections{width: 100%; height: 100vh; position: relative; overflow: hidden;}
-.width_con{position:relative; width:1440px; height:100%; margin: 320px auto 0 auto; background:rgba(0,0,0,0.5);}
+.sections{width: 100%;height: 100vh; position: relative; overflow: hidden;}
+.width_con{position:relative; width:calc(100% - 480px); height:100%;  margin:320px 240px 23px 240px;}
+
+
+.box_con{position:absolute; right:0; top:0; width:464px; height:100%; padding:58px 25px;  border-top:solid 1px #000; background:#fff; text-align:left;}
+.row{width:68px; height:1px; margin:30px 0; background:#000;}
+.btn_a{position:absolute; bottom:58px; line-height:35px;}
 
 .section_02{}
-.section_02 .width_con{background:transparent;}
-.section_02 .width_con .three_con{}
+.section_02 .width_con{}
+.section_02 .width_con .title{text-align:center;}
+.section_02 .width_con .row{width:100%; margin:15px 0;}
+.section_02 .width_con .desc{text-align:center;}
+.section_02 .width_con .desc h2{line-height:1.5em;}
+.section_02 .width_con .left{text-align:left;}
+.section_02 .width_con .three_con{margin-top:-50px;}
 .section_02 .width_con .three_con li{}
-.section_02 .width_con .three_con li .title{text-align:center;}
-.section_02 .width_con .three_con li .row{width:100%; height:1px; margin:15px 0; background:#000;}
-.section_02 .width_con .three_con li .desc{text-align:center;}
-.section_02 .width_con .three_con li .desc h2{line-height:1.5em;}
 .section_02 .width_con .three_con li .image{margin-top:60px; width:100%; height:100%; background:#eee; transition:all 250ms ease-out;}
-.section_02 .width_con .three_con li:nth-child(1) .image{background-image: url(../../public/images/section_02/image_01_black.jpg);}
-.section_02 .width_con .three_con li:nth-child(1):hover .image{background-image: url(../../public/images/section_02/image_01_color.jpg);}
-.section_02 .width_con .three_con li:nth-child(2) .image{background-image: url(../../public/images/section_02/image_02_black.jpg);}
-.section_02 .width_con .three_con li:nth-child(3) .image{background-image: url(../../public/images/section_02/image_03_black.jpg);}
+.section_02 .width_con .three_con li:nth-child(1) .image{background-image: url(../../public/images/section_02/image_01_black.jpg); background-size: cover;}
+.section_02 .width_con .three_con li:nth-child(1):hover .image{background-image: url(../../public/images/section_02/image_01_color.jpg); background-size: cover;}
+.section_02 .width_con .three_con li:nth-child(2) .image{background-image: url(../../public/images/section_02/image_02_black.jpg); background-size: cover;}
+.section_02 .width_con .three_con li:nth-child(3) .image{background-image: url(../../public/images/section_02/image_03_black.jpg); background-size: cover;}
 
+.section_03{}
+.section_03 .map{position:absolute; left:0; bottom:23px; transition:all 250ms ease-out;}
+.section_03 .width_con{text-align:left;}
+.section_03 .width_con .box_con{position:absolute; right:0; top:0; width:464px; height:100%; padding:58px 25px;  border-top:solid 1px #000; background:#fff; text-align:left;}
+.section_03 .width_con .row{width:68px; margin:30px 0;}
+.section_03 .width_con .btn_a{position:absolute; bottom:58px; line-height:35px;}
 
-.section_03{background:#00f;}
-.section_03 .map{position:absolute; left:0; bottom:0; width:4000px; height:468px; background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(0, 38, 255, 0.5)); transition:all 250ms ease-out;}
-.section_04{background:#0ff;}
-.section_05{background:#ff0;}
-.section_06{background:#f00;}
+.section_04{}
+.section_04 .width_con{z-index:1; margin:290px 240px 110px 240px;}
+.section_04 .width_con .box_con{right:auto; left:0; background:rgba(255,255,255,.5);}
+.section_04 .image_box{position:absolute; right:10%; top:50%; width:50%; transform:translate(0,-50%);}
+.section_04 .image_box img{width:100%;}
+
+.section_05{background-image:url(../../public/images/section_05/image_01.png); background-position-y:bottom; background-repeat:no-repeat; background-size:contain; }
+
+.section_06{}
+.section_06 .width_con{width:100%; height:100%; margin-left:194px;}
+.section_06 .bottom_line{position:absolute; bottom:25px; width:100%; height:1px; background:#000;}
