@@ -71,7 +71,8 @@ html, body {min-width: 1200px;}
 .section_02 .width_con .left{text-align:left;}
 .section_02 .width_con .three_con{margin-top:-50px;}
 .section_02 .width_con .three_con li{}
-.section_02 .width_con .three_con li .image{margin-top:60px; width:100%; height:100%; background:#eee; transition:all 250ms ease-out;}
+.section_02 .width_con .three_con li .image{margin-top:60px; width:100%;background:#eee; transition:all 250ms ease-out;}
+.section_02 .width_con .three_con li .image img{width:100%;}
 .section_02 .width_con .three_con li:nth-child(1) .image{background-image: url(../../public/images/section_02/image_01_black.jpg); background-size: cover;}
 .section_02 .width_con .three_con li:nth-child(1):hover .image{background-image: url(../../public/images/section_02/image_01_color.jpg); background-size: cover;}
 .section_02 .width_con .three_con li:nth-child(2) .image{background-image: url(../../public/images/section_02/image_02_black.jpg); background-size: cover;}
@@ -93,7 +94,9 @@ html, body {min-width: 1200px;}
 .section_05{background-image:url(../../public/images/section_05/image_01.png); background-position-y:bottom; background-repeat:no-repeat; background-size:contain; }
 
 .section_06{padding:0;}
-.section_06 .image{position:absolute; width:100%; height:100%; background:url(../../public/images/section_06/image_01.png); background-size:contain; z-index:1;}
+.section_06 .left_line{position:absolute; left:10%; top:0; width:1px; height:100%; background:#000;}
+.section_06 .image{position:absolute; width:100%; height:100%; background:url(../../public/images/section_06/image_01.png); background-size:contain; background-repeat:no-repeat; 
+    pointer-events:none; z-index:1; }
 .section_06 .propmate_con{position:absolute; width:100%; height:100%; 
     -webkit-mask-image: url("../../public/images/section_06/image_01.png");
     -webkit-mask-repeat: no-repeat;
@@ -101,9 +104,31 @@ html, body {min-width: 1200px;}
     mask-image: url("../../public/images/section_06/image_01.png");
     mask-repeat: no-repeat;
     mask-size: 100%;
-z-index:2;} 
+    z-index:2;
+    pointer-events:none;
+} 
 .section_06 .propmate_con .propmate{position:absolute; left:50%; top:40%; transform:translateX(-50%); font-size:342px; font-weight:800; line-height:1em; letter-spacing:-70px; font-family:'Noto Sans' }
 .section_06 .width_con{width:100%; height:100%; margin-left:194px;}
 .section_06 .bottom_line{position:absolute; bottom:25px; width:100%; height:1px; background:#000;}
-.section_06 .bottom_con {position:absolute; left:0; bottom:0; width:100%; height:53.6%; border-top:solid 1px #000;}
-.section_06 .bottom_con .one_box{width:194px; height:100%; background:#f0f;}
+.section_06 .top_con {position:relative; width:100%; height:47%; padding-left:10%; z-index:1;}
+.section_06 .top_con .text_con{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);}
+.section_06 .top_con .text_con div{display: inline-block; margin:0 100px;}
+.section_06 .top_con .text_con .mail{}
+.section_06 .top_con .text_con div span{display: block; text-align: center;}
+.section_06 .top_con .text_con div span:nth-child(1){font-size:40px; font-weight:700;  font-family:'Noto Serif' !important;}
+.section_06 .top_con .text_con .mail span:nth-child(2){}
+.section_06 .top_con .text_con .ir{}
+.section_06 .bottom_con {position:relative; width:100%; height:53%; padding-bottom:25px; border-top:solid 1px #000;}
+.section_06 .bottom_con .one_box{position:relative; width:10%; height:100%; float:left;}
+.section_06 .bottom_con .two_box{position:relative; width:43.5%; height:100%; padding:10px 20px; border-right:solid 1px #000; float:left;}
+.section_06 .bottom_con .three_box{position:relative; width:46.5%; height:100%; float:left;} 
+.section_06 .bottom_con .three_box .left.bottom{left:12px;}
+.section_06 .text_align_right {text-align:right;}
+.section_06 .left.top,
+.section_06 .left.bottom,
+.section_06 .right.top,
+.section_06 .right.bottom{position:absolute;}
+.section_06 .left.top{left:45px; top:10px;}
+.section_06 .left.bottom{left:45px; bottom:10px;}
+.section_06 .right.top{right:12px; top:10px;}
+.section_06 .right.bottom{right:12px; bottom:10px;}
