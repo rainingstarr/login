@@ -79,7 +79,7 @@ html, body {min-width: 1200px;}
 .section_02 .width_con .three_con li:nth-child(3) .image{background-image: url(../../public/images/section_02/image_03_black.jpg); background-size: cover;}
 
 .section_03{}
-.section_03 .map{position:absolute; left:0; bottom:23px; transition:all 250ms ease-out;}
+.section_03 .map{position:absolute; left:200px; bottom:23px; transition:all 250ms ease-out;}
 .section_03 .width_con{text-align:left;}
 .section_03 .width_con .box_con{position:absolute; right:0; top:-63px; width:464px; height:100%; padding:58px 25px;  border-top:solid 1px #000; background:#fff; text-align:left;}
 .section_03 .width_con .row{width:68px; margin:30px 0;}

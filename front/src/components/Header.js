@@ -9,6 +9,7 @@ const Header = ({ scrollIndex ,pagesLength}) => {
     return(
         <div className="header_bg">
             <header>
+                <div className={`line ${scrollIndex == 1 || scrollIndex ==6 ? "hide" : ""}`}></div>
                 <input className="burger-check" type="checkbox" id="burger-check" />
                 <label className="burger-icon" htmlFor="burger-check">
                 <span className="burger-sticks"></span>
@@ -38,6 +39,10 @@ const Header = ({ scrollIndex ,pagesLength}) => {
                     return <Dot key={index} num={index+1} scrollIndex={scrollIndex}></Dot>
                     })}
                     </div>
+                </div>
+                <div className={`side_nav_con ${scrollIndex == 1 || scrollIndex ==2 || scrollIndex ==6 ? "hide" : ""}`}>
+                    <img src={process.env.PUBLIC_URL+"images/image_bg_01.svg"}></img>
+                    <img src={process.env.PUBLIC_URL+"images/image_cube.svg"} className="cube" style={{top:30*(scrollIndex - 1)+'px'}}></img>
                 </div>
             </header>
         </div>

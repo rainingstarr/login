@@ -32,7 +32,7 @@ function Fullpage() {
       const pageHeight = window.innerHeight;//현재page의 height가져옴
       if(scrollIndex == 3){
         const newLeft = parseInt(map.style.left || '0') - deltaY;
-        if(0 >=newLeft && newLeft >= pageWidth-mapWidth){
+        if(200 >=newLeft && newLeft >= pageWidth-mapWidth){
           map.style.left = `${newLeft}px`;
           return false;
         }
