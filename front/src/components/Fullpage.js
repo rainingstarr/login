@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import '../css/common.css';
 import '../css/main.css';
+import '../css/responsive.css'
 import Section01 from "./sections/Section01";
 import Section02 from "./sections/Section02";
 import Section03 from "./sections/Section03";
@@ -8,20 +9,26 @@ import Section04 from "./sections/Section04";
 import Section05 from "./sections/Section05";
 import Section06 from "./sections/Section06";
 import Header from "./Header";
-const pages = [
-  { id: 1, content: <Section01/>},
-  { id: 2, content: <Section02/>},
-  { id: 3, content: <Section03/>},
-  { id: 4, content: <Section04/>},
-  { id: 5, content: <Section05/>},
-  { id: 6, content: <Section06/>},
-];
 let scrolling;
 
 function Fullpage() {
   const outerDivRef = useRef();//리액트내에서 도큐먼트 조작시에는 Ref를 사용하는게 좋음
   const [scrollIndex, setScrollIndex] = useState(1);
+  
+  const pages = [
+    { id: 1, content: <Section01/>},
+    { id: 2, content: <Section02 setScrollIndex={setScrollIndex} outerDivRef={outerDivRef}/>},
+    { id: 3, content: <Section03/>},
+    { id: 4, content: <Section04/>},
+    { id: 5, content: <Section05/>},
+    { id: 6, content: <Section06/>},
+  ];
   useEffect(() => {
+    const resize = () => {
+      const pageHeight = window.innerHeight;
+      outerDivRef.current.style.height = `${pageHeight}px`;
+      outerDivRef.current.style.transform = `translateY(-${pageHeight * (scrollIndex - 1)}px)`;
+    };
     const wheelHandler = (e) => {
       e.preventDefault();
       if(scrolling) return;
@@ -59,7 +66,7 @@ function Fullpage() {
 
     const outerDivRefCurrent = outerDivRef.current;
     outerDivRefCurrent.addEventListener("wheel", wheelHandler);
-
+    window.addEventListener('resize',resize);
     return () => {
       outerDivRefCurrent.removeEventListener("wheel", wheelHandler);
     };
@@ -67,7 +74,7 @@ function Fullpage() {
 
   return (
     <>
-      <Header scrollIndex={scrollIndex} pagesLength={pages.length}/>
+      <Header scrollIndex={scrollIndex} pagesLength={pages.length} setScrollIndex={setScrollIndex} outerDivRef={outerDivRef}/>
       <div ref={outerDivRef} className="outer white">
         {pages.map((page, index) => (
           <div key={page.id}>

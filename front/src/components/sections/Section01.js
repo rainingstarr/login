@@ -31,40 +31,22 @@ function Section01 () {
     return (
     <>
         <main>
-        <div className={`wrap1_bg ${bgClass}`}>
-            <div className="wrap1">
-            <h2>집을 짓는 새로운 방식, 프롭메이트</h2>
-            <ul className="wrap1_info">
-                {items.map((item, index) => (
-                <li key={index}>
-                    <div className='desc' onMouseEnter={() => {handleMouseEnter(index);}} onMouseLeave={handleMouseLeave}>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                    </div>
-                </li>
-                ))}
-            </ul>
+            <div className={`section_01 sections  ${bgClass}`}>
+                <div className="width_con">
+                <h1>집을 짓는 새로운 방식, 프롭메이트</h1>
+                <ul className="wrap1_info">
+                    {items.map((item, index) => (
+                    <li key={index}>
+                        <div className='desc' onMouseEnter={() => {handleMouseEnter(index);}} onMouseLeave={handleMouseLeave}>
+                        <h3>{item.title}</h3>
+                        <h4>{item.description}</h4>
+                        </div>
+                    </li>
+                    ))}
+                </ul>
+                </div>
             </div>
-        </div>
         </main>
-        {/* <div className="footer_bg">
-        <footer>
-            <ul className="footer_info">
-            <li>회사명 | 프롭메이트</li>
-            <li><address>주소 | 서울시 광진구 광나루로 478 L101호</address></li>
-            <li>대표 | 고호준</li>
-            <li>개인정보 관리 책임자 | 윤주원</li>
-            <li>사업자등록번호 | 628-40-00876</li>
-            </ul>
-            <ul className="footer_link">
-            <li><a href="#">회사소개</a></li>
-            <li><a href="#">이용약관</a></li>
-            <li><a href="#">개인정보처리방침</a></li>
-            <li><a href="#">위치기반 서비스 이용약관</a></li>
-            </ul>
-            <p>Copyright 2022 propmate Co. Ltd. all rights reserved.</p>
-        </footer>
-        </div> */}
     </>
   );
 }

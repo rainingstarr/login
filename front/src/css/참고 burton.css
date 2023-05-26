@@ -1,0 +1,347 @@
+@charset "UTF-8";
+
+@media all and (min-width:0px) and (max-width:1239px){    
+    .bottom,
+    #technology.section_04 .width_con ul.four_con li > div{padding:20px !important;}
+    #visual.section_01 {margin-top: 65px;}
+    #visual.section_01 .width_con .title_con.left { margin: 0}
+}
+@media all and (min-width:0px) and (max-width:599px){
+    h1{font-size:44px; margin: 0 0 0 -3px;}
+    h2{font-size:32px; margin: 3px 0 15px 0;}
+    h3{font-size:18px; margin: 0 0 2px 0;}
+    h4{font-size:12px; margin: 13px 0 0 0;}
+    h4:before{top:-10px;}
+    h5{font-size:11px; margin: 0 0 0 0;}
+    h6{font-size:10px; margin: 0 0 0 0;}
+    #resort.section_03 .width_con .light_width_con .all_icon_con .icon_con .info_con i{font-size:40px;}
+	#resort.section_03 .width_con .light_width_con .all_icon_con .icon_con .info_con h3{font-size:14px;}
+    #borderdeck.section_02 .width_con .pg_con .progress_con h3,
+    #borderdeck.section_02 dl dt,
+    #borderdeck.section_02 dl dd{font-size:12px; }
+	
+	#ourteam.section_08 .width_con ul.four_con li a i,
+    #ourteam.section_08 .width_con ul.four_con li a span{font-size:16px;}
+	
+	#contactus.section_10 .width_con .contact_box .title_con h2{font-size:30px;}
+	#contactus.section_10 .width_con .contact_box .title_con h3{font-size:16px;}
+	#contactus.section_10 .width_con .contact_box{padding:15px;}
+    
+}
+@media all and (min-width:600px) and (max-width:1239px){
+    h1{font-size:72px; margin: 0 0 20px -3px;}
+    h2{font-size:48px; margin: 4px 0 24px 0;}
+    h3{font-size:24px; margin: 0 0 1px 0;}
+    h4{font-size:14px; margin: 0 0 0 0;}
+    h4:before{top:-16px;}
+    h5{font-size:12px; margin: 0 0 0 0;}
+    h6{font-size:11px; margin: 0 0 0 0;}
+	#resort.section_03 .width_con .light_width_con .all_icon_con .icon_con .info_con i{font-size:40px;}
+	#resort.section_03 .width_con .light_width_con .all_icon_con .icon_con .info_con h3{font-size:20px;}
+    #borderdeck.section_02 .width_con .pg_con .progress_con h3,
+    #borderdeck.section_02 dl dt,
+    #borderdeck.section_02 dl dd{font-size:14px;}
+	
+	#ourteam.section_08 .width_con ul.four_con li a i,
+    #ourteam.section_08 .width_con ul.four_con li a span{font-size:20px;}
+}
+@media all and (min-width:0px) and (max-width:999px){
+    #header .width_con div.nav_con{position: fixed; right: -300px; top:0; height:100vh; width: 260px; padding: 30px; background: #e4f3ff; z-index: 10; transition: right 400ms ease-in-out; border-top-left-radius: 30px; border-bottom-left-radius:30px; box-sizing:border-box; overflow-y: scroll;}
+    #header .width_con div.nav_con:after,
+    #header .width_con div.nav_con:before{position:fixed; width:100%; height:30px; content:'';}
+    #header .width_con div.nav_con:after{top:calc(100vh - 30px); background:linear-gradient(180deg, rgba(228, 243, 255, 0) 0%, rgba(228, 243, 255, 1) 100%);}
+    #header .width_con div.nav_con:before{top:0; background:linear-gradient(0deg, rgba(228, 243, 255, 0) 0%, rgba(228, 243, 255, 1) 100%); z-index:1;}
+    #header .btn_open_nav div,
+    #header .btn_open_nav:after,
+    #header .btn_open_nav:before,
+    #header .btn_open_nav{position: absolute; right:0; width:30px; height:26px; transition: all 400ms ease-in-out;}    
+    #header .btn_open_nav{top:calc(50% - 18px); padding:5px;}
+    #header .btn_open_nav div{height:4px; top:calc(50% - 2px);background: #222;}
+    #header .btn_open_nav:after{height:4px; top:5px; background: #222; content:'';}
+    #header .btn_open_nav:before{height:4px; bottom:5px; background: #222; content:'';}
+    #header .width_con ul.nav.nav_01 { position:relative; bottom: 0; right:auto; top:0 !important; margin-left:30px; opacity:0;}
+    #header .width_con ul.nav.nav_01 li{}
+    #header .width_con ul.nav.nav_01 li.search{margin:0;}
+    #header .width_con ul.nav.nav_02 {position:relative; top:0 !important; bottom:auto;}
+    #header .width_con ul.nav.nav_02 li{display:block; margin: 30px 0 30px 30px; opacity:0;}
+    #header.small:hover {height:50px}
+    #header.small:hover .width_con .btn_home img{height:40px; padding: 5px;}
+	body.open_nav {overflow:hidden;}
+    body.open_nav #header .width_con div.nav_con {right:0;}
+    body.open_nav #header .btn_open_nav{transform: translateX(-250px); z-index: 999;}
+    body.open_nav #header .btn_open_nav:after{transform: rotate(45deg); top:16px;}
+    body.open_nav #header .btn_open_nav:before{transform: rotate(-45deg); bottom:16px;}
+    body.open_nav #header .btn_open_nav div{opacity:0;}
+    body.open_nav #header ul.nav_01 {opacity:1 !important; margin-left:0 !important;}
+    body.open_nav #header ul.nav_02 li {opacity:1 !important; margin-left:0 !important;}
+    body.open_nav #header ul.nav_02 li:nth-child(2) {transition-delay: 0.1s;}
+    body.open_nav #header ul.nav_02 li:nth-child(3) {transition-delay: 0.2s;}
+    body.open_nav #header ul.nav_02 li:nth-child(4) {transition-delay: 0.3s;}
+    body.open_nav #header ul.nav_02 li:nth-child(5) {transition-delay: 0.4s;}
+    body.open_nav #header ul.nav_02 li:nth-child(6) {transition-delay: 0.5s;}
+    body.open_nav #header ul.nav_02 li:nth-child(7) {transition-delay: 0.6s;}
+    body.open_nav #header ul.nav_02 li:nth-child(8) {transition-delay: 0.7s;}
+    body.open_nav #header ul.nav_02 li:nth-child(9) {transition-delay: 0.8s;}
+    body.open_nav #header ul.nav_02 li:nth-child(10) {transition-delay:0.9s;}
+    body.open_nav #header ul.nav_01 {transition-delay: 1s;}
+	.open_nav_cover {position: fixed; top:0; left:0; height:0vh; width:100vw; backdrop-filter: blur(0px); -webkit-backdrop-filter: blur(0px); background: rgba(0,0,0,0); transition: backdrop-filter 0.25s linear, height 0s linear 0.25s, background 0.25s linear; z-index: 8;}
+	body.open_nav .open_nav_cover {height: 100vh; background: rgba(255,255,255,0.7); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); transition: backdrop-filter 0.25s linear, background 0.25s linear;}
+	
+	#borderdeck.section_02 .width_con .info_con .pg_con .progress_con progress {margin-top:5px;}
+	
+	#resort.section_03 {margin-top:0;}
+	
+	#purpose.section_07 .width_con .content_wrap{margin:0;}
+	
+    #ourteam.section_08 .width_con ul.four_con li a i{bottom:15px; opacity:1;}
+    
+	#founder.section_09 {background:linear-gradient(rgba(255,255,255,.7),rgba(255,255,255,.7)) ,url(../img/founder/bg_01.png); background-size:cover;}
+	#founder.section_09 .img_wrap{display:none;}
+	#founder.section_09 .width_con .title_con.left{width:100%; margin:0;}
+	
+    #contactus.section_10 iframe#map_con {width:150%;}
+	
+}
+/*--------------------------------------------------------반응형 단위별로 시작 ---------------*/  
+@media all and (min-width:0px) and (max-width:479px){
+    h4{font-size:10px; margin: 13px 0 0 0;}
+    .width_con{width: calc(100% - 40px); padding: 80px 0;} /*마진 좌우 : 20*/
+    #header {height:60px;}
+    #header .width_con .btn_home img {height:50px;}
+    .six_con{width: calc(100% + 20px); margin: -10px -10px;}
+    .six_con > *{width: calc(50% - 20px); margin: 10px 10px;}
+    .four_con{width: calc(100% + 20px); margin: -10px -10px;}
+    .four_con > *{width: calc(50% - 20px); margin: 10px 10px;}
+    
+    #visual.section_01 {margin-top: 60px;}
+    #visual.section_01 .width_con .title_con.left {margin:0;}
+    
+    #technology.section_04 .width_con > .title_con {margin-bottom:40px;}
+    #technology.section_04 .width_con ul.four_con li {width: calc(50% - 20px);}
+    #technology.section_04 .width_con ul.four_con li.wide {width: calc(100% - 20px);}
+    #technology.section_04 .width_con ul.four_con li.wide > img {padding: 0 10px;}
+    #technology.section_04 .width_con ul.four_con li.long {}
+    #technology.section_04 .width_con ul.four_con li.long > img{padding: 10px 0;}
+    #technology.section_04 .width_con ul.four_con li.wide div.img_con.img_02 img, 
+    #technology.section_04 .width_con ul.four_con li.long div.img_con.img_01 img {opacity:0.6;}
+    
+    #footer {text-align:center;}
+    #footer .width_con .info_con {text-align:center;}
+    #footer .width_con .info_con a{font-size:11px; margin: 0 10px;}
+    #footer .width_con .info_con img {position:relative; margin:0 auto; margin-bottom:20px;}
+    #footer .width_con .info_con img,
+    #footer .width_con .info_con ,
+    #footer .width_con .copy_con{display:block; text-align:center;}
+    #footer .width_con .copy_con b{font-size:10px;}
+    #footer .width_con .sns_icon li {margin : 0 10px;}
+    
+    progress {-webkit-appearance: none;height:20px;}
+    #borderdeck.section_02 .width_con .title_con.left h4{height:75px;}
+    #borderdeck.section_02 .width_con .all_info_con .info_con .title_con{width:100%;}
+    #borderdeck.section_02 .width_con .all_info_con{width:calc(100% + 20px); margin:0 -10px;}
+    #borderdeck.section_02 .width_con .all_info_con .info_con {width:calc(50% - 20px); margin:0 10px;}
+    #borderdeck.section_02 .width_con .all_info_con .pg_con .progress_con {width:100% ;margin: 5px 10px;}	
+    #borderdeck.section_02 .width_con .all_info_con .pg_con{width:calc(50% - 20px); margin: -5px 0;}
+    #borderdeck.section_02 dl dt,
+    #borderdeck.section_02 dl dd{width:calc(25% - 10px); padding: 15px 0 15px 10px;} 
+    
+    #borderdeck.section_02 .width_con .all_con {width:calc(100% + 20px); margin: 0 -10px 20px -10px;}
+	#borderdeck.section_02 .width_con .all_con .snowboard_con {margin: -10px 0;}
+	#borderdeck.section_02 .width_con .all_con .snowboard_con .snow_img_con {width:calc(50% - 20px); margin: 10px 10px;}
+	
+	#resort.section_03 .width_con .light_width_con  {left:0; width:100%;}
+	#resort.section_03 .width_con .light_width_con .title_con{display:inline-block; *zoom:1; *display:inline; margin:0 10px; width:calc(50% - 20px); padding:0;}
+	#resort.section_03 .width_con .light_width_con .all_icon_con {margin: -10px -10px; width:calc(100% + 20px);}
+	#resort.section_03 .width_con .light_width_con .all_icon_con .icon_con {width:calc(50% - 20px); margin:10px 10px;}
+	#resort.section_03 .width_con .light_width_con .all_icon_con .icon_con .info_con i {font-size:20px;}
+	#resort.section_03:before,
+	#resort.section_03:after{display:none;}
+    
+	#products.section_05 .width_con .title_con.center{ margin-bottom:40px;}
+	#products.section_05 .width_con .title_con.center{ margin-bottom:40px;}
+	#products.section_05 .width_con ul.six_con li a span.name{left: 10px; bottom: 15px;}
+	#products.section_05 .width_con ul.six_con li a span.badge_con{padding:15px 15px;}
+	
+	#aboutus.section_06{background: linear-gradient(rgba(255,255,255,.7),rgba(255,255,255,.7)),url(../img/about_us/img_au_01.png) 50%;background-size: cover;}
+	#aboutus.section_06 .width_con .about_wrap {width:100%; margin: 0;}
+	#aboutus.section_06 .width_con .about_wrap .title_con.left{width:100%; margin:0;}
+	#aboutus.section_06 .width_con .about_wrap img{display:none;}
+	
+	#purpose.section_07 .width_con{width:100%;}	
+	#purpose.section_07 .width_con .content_wrap .purpose_wrap.people{background: linear-gradient(90deg,rgba(0,0,0,0)40%,rgba(0,0,0,1)60%),url(../img/purpose/img_01.png) 50%;background-size: cover;}	
+	#purpose.section_07 .width_con .content_wrap .purpose_wrap.planet{background: linear-gradient(-90deg,rgba(0,0,0,0)40%,rgba(0,0,0,1)60%),url(../img/purpose/img_02.png) 50%;background-size: cover;}
+	#purpose.section_07 .width_con .content_wrap .purpose_wrap.sport{background: left 50% top 50% linear-gradient(90deg,rgba(0,0,0,0)40%,rgba(0,0,0,1)60%),url(../img/purpose/img_03.png) 50%;background-size: cover;}
+	#purpose.section_07 .width_con .content_wrap .purpose_wrap{width:100%; margin:0;}
+	#purpose.section_07 .width_con .content_wrap .purpose_wrap .title_con.left{width:calc(50% - 20px); margin:50px 20px;}
+	#purpose.section_07 .width_con .content_wrap .purpose_wrap img{display:none;}	
+	#purpose.section_07 .width_con .content_wrap .purpose_wrap.people .title_con.left,
+	#purpose.section_07 .width_con .content_wrap .purpose_wrap.sport .title_con.left{margin:50px 10px 50px calc(50% + 10px);}
+	
+	#ourteam.section_08 .width_con ul.four_con li{width:calc(50% - 20px); margin: 10px 10px;}
+	#contactus.section_10 .width_con .contact_box{width:60%;}
+}
+
+@media all and (min-width:480px) and (max-width:599px){
+    .width_con{width: calc(100% - 50px); padding: 80px 0;}
+    .six_con{width: calc(100% + 25px); margin:  -12.5px -12.5px;}
+    .six_con > *{width: calc(50% - 25px); margin:  12.5px 12.5px;}
+    .four_con{width: calc(100% + 25px); margin:  -12.5px -12.5px;}
+    .four_con > *{width: calc(50% - 25px); margin:  12.5px 12.5px;}
+	
+    #header {height:65px;}
+    #header .width_con .btn_home img {height:55px;}
+    
+    #technology.section_04 .width_con > .title_con {margin-bottom:40px;}
+    #technology.section_04 .width_con ul.four_con li {width: calc(50% - 25px);}
+    #technology.section_04 .width_con ul.four_con li.wide {width: calc(100% - 25px);}
+    #technology.section_04 .width_con ul.four_con li.wide > img {padding: 0 12.5px;}
+    #technology.section_04 .width_con ul.four_con li.long {}
+    #technology.section_04 .width_con ul.four_con li.long > img{padding: 12.5px 0;}
+    #technology.section_04 .width_con ul.four_con li.wide div.img_con.img_02 img, 
+    #technology.section_04 .width_con ul.four_con li.long div.img_con.img_01 img {opacity:1;}    
+    
+    progress {-webkit-appearance: none;height:20px;}
+    #borderdeck.section_02 .width_con .title_con.left h4{height:75px;}
+    #borderdeck.section_02 .width_con .all_info_con .info_con .title_con{width:100%;}
+    #borderdeck.section_02 .width_con .all_info_con{width:calc(100% + 25px); margin:0 -12.5px;}
+    #borderdeck.section_02 .width_con .all_info_con .info_con {width:calc(50% - 25px); margin:0 12.5px;}
+    #borderdeck.section_02 .width_con .all_info_con .pg_con .progress_con {width:100% ;margin: 6.25px 12.5px;}	
+    #borderdeck.section_02 .width_con .all_info_con .pg_con{width:calc(50% - 25px); margin: -6.25px 0;}
+    #borderdeck.section_02 dl dt,
+    #borderdeck.section_02 dl dd{width:calc(25% - 10px); padding: 15px 0 15px 10px;}
+    #borderdeck.section_02 .width_con .all_con {width:calc(100% + 25px); margin: 0 -12.5px 25px -12.5px;}
+	#borderdeck.section_02 .width_con .all_con .snowboard_con {margin: -12.5px 0;}
+	#borderdeck.section_02 .width_con .all_con .snowboard_con .snow_img_con {width:calc(50% - 25px); margin: 12.5px 12.5px;}
+	
+    #resort.section_03 .width_con .light_width_con  {left:0; width:100%;}
+	#resort.section_03 .width_con .light_width_con .title_con{display:inline-block; *zoom:1; *display:inline; margin:0 12.5px; width:calc(50% - 25px); padding:0;}
+	#resort.section_03 .width_con .light_width_con .all_icon_con {margin: -12.5px -12.5px; width:calc(100% + 25px);}
+	#resort.section_03 .width_con .light_width_con .all_icon_con .icon_con {width:calc(50% - 25px); margin:12.5px 12.5px;}
+	#resort.section_03 .width_con .light_width_con .all_icon_con .icon_con .info_con i {font-size:40px;}
+	#resort.section_03:before,
+	#resort.section_03:after{display:none;}
+	
+	#ourteam.section_08 .width_con .title_con,
+	#products.section_05 .width_con .title_con.center{ margin-bottom:40px;}
+	
+	#aboutus.section_06{background: linear-gradient(rgba(255,255,255,.7),rgba(255,255,255,.7)),url(../img/about_us/img_au_01.png) 50%;background-size: cover;}
+	#aboutus.section_06 .width_con .about_wrap {width:100%; margin: 0;}
+	#aboutus.section_06 .width_con .about_wrap .title_con.left{width:100%; margin:0;}
+	#aboutus.section_06 .width_con .about_wrap img{display:none;}
+	
+	#purpose.section_07 .width_con{width:100%;}	
+	#purpose.section_07 .width_con .content_wrap .purpose_wrap.people{background: linear-gradient(90deg,rgba(0,0,0,0)40%,rgba(0,0,0,1)60%),url(../img/purpose/img_01.png) 50%;background-size: cover;}	
+	#purpose.section_07 .width_con .content_wrap .purpose_wrap.planet{background: linear-gradient(-90deg,rgba(0,0,0,0)40%,rgba(0,0,0,1)60%),url(../img/purpose/img_02.png) 50%;background-size: cover;}
+	#purpose.section_07 .width_con .content_wrap .purpose_wrap.sport{background: left 50% top 50% linear-gradient(90deg,rgba(0,0,0,0)40%,rgba(0,0,0,1)60%),url(../img/purpose/img_03.png) 50%;background-size: cover;}
+	#purpose.section_07 .width_con .content_wrap .purpose_wrap{width:100%; margin:0 ;}
+	#purpose.section_07 .width_con .content_wrap .purpose_wrap .title_con.left{width:calc(50% - 25px); margin:100px 25px;}
+	#purpose.section_07 .width_con .content_wrap .purpose_wrap img{display:none;}
+	#purpose.section_07 .width_con .content_wrap .purpose_wrap.people .title_con.left,
+	#purpose.section_07 .width_con .content_wrap .purpose_wrap.sport .title_con.left{margin:100px 0 100px calc(50% + 12.5px);}
+	
+	#ourteam.section_08 .width_con ul.four_con li{width:calc(50% - 25px); margin: 12.5px 12.5px;}
+	
+	#contactus.section_10 .width_con .contact_box{width:60%;}
+}
+@media all and (min-width:600px) and (max-width:999px){
+    .width_con{ width: calc(100% - 60px); padding: 100px 0;}
+    .six_con{ width: calc(100% + 30px); margin: -15px -15px;}
+    .six_con > *{ width: calc(33.333% - 30px); margin: 15px 15px;}
+    .four_con{ width: calc(100% + 30px); margin: -15px -15px;}
+    .four_con > *{ width: calc(25% - 30px); margin: 15px 15px;}
+    
+    #header {height:70px;}
+    #header .width_con .btn_home img {height:60px;} 
+    
+    #visual.section_01 {margin-top: 70px;}
+    #visual.section_01 .width_con .title_con.left {margin: 0;}
+    
+    #technology.section_04 .width_con > .title_con {margin-bottom:50px;}
+    #technology.section_04 .width_con ul.four_con li {width: calc(50% - 30px);}
+    #technology.section_04 .width_con ul.four_con li.wide {width: calc(100% - 30px);}
+    #technology.section_04 .width_con ul.four_con li.wide > img {padding: 0 15px;}
+    #technology.section_04 .width_con ul.four_con li.long {}
+    #technology.section_04 .width_con ul.four_con li.long > img{padding: 15px 0 ;}
+    #technology.section_04 .width_con ul.four_con li.wide div.img_con.img_02 img,
+    #technology.section_04 .width_con ul.four_con li.long div.img_con.img_01 img {opacity:1;}
+    
+    progress {-webkit-appearance: none;height:30px;}
+    #borderdeck.section_02 .width_con .title_con.left h4{height:52.5px;}
+    #borderdeck.section_02 .width_con .all_info_con .info_con .title_con{width:100%;}
+    #borderdeck.section_02 .width_con .all_info_con{width:calc(100% + 30px); margin:0 -15px;}
+    #borderdeck.section_02 .width_con .all_info_con .info_con {width:calc(50% - 30px); margin:0 15px;}
+    #borderdeck.section_02 .width_con .all_info_con .pg_con .progress_con {width:100% ;margin: 7.5px 15px;}	
+    #borderdeck.section_02 .width_con .all_info_con .pg_con{width:calc(50% - 30px); margin: -7.5px 0;}
+    #borderdeck.section_02 dl dt,
+    #borderdeck.section_02 dl dd{width:calc(25% - 10px); padding: 15px 0 15px 10px;}
+    
+    #borderdeck.section_02 .width_con .all_con {width:calc(100% + 30px); margin: 0 -15px 30px -15px;}
+	#borderdeck.section_02 .width_con .all_con .snowboard_con {margin: -15px 0;}
+	#borderdeck.section_02 .width_con .all_con .snowboard_con .snow_img_con {width:calc(50% - 30px); margin: 15px 15px;}
+		
+	#resort.section_03 .width_con .light_width_con  {left:0; width:100%;}
+	#resort.section_03 .width_con .light_width_con .title_con{display:inline-block; *zoom:1; *display:inline; margin:0 15px; width:calc(50% - 30px); padding:0;}
+	#resort.section_03 .width_con .light_width_con .all_icon_con {margin: -15px -15px; width:calc(100% + 30px);}
+	#resort.section_03 .width_con .light_width_con .all_icon_con .icon_con {width:calc(50% - 30px); margin:15px 15px;}
+	#resort.section_03 .width_con .light_width_con .all_icon_con .icon_con .info_con i {font-size:40px;}
+	#resort.section_03:before,
+	#resort.section_03:after{display:none;}
+	
+	#ourteam.section_08 .width_con .title_con,
+	#products.section_05 .width_con .title_con.center{ margin-bottom:50px;}
+	
+	#aboutus.section_06{background: linear-gradient(rgba(255,255,255,.7),rgba(255,255,255,.7)),url(../img/about_us/img_au_01.png) 50%;background-size: cover;}
+	#aboutus.section_06 .width_con .about_wrap {width:100%; margin: 0;}
+	#aboutus.section_06 .width_con .about_wrap .title_con.left{width:100%; margin:0;}
+	#aboutus.section_06 .width_con .about_wrap img{display:none;}
+	
+	#purpose.section_07 .width_con{width:100%;}
+	
+	#purpose.section_07 .width_con .content_wrap .purpose_wrap.people{background: linear-gradient(90deg,rgba(0,0,0,0)40%,rgba(0,0,0,1)60%),url(../img/purpose/img_01.png) 50%;background-size: cover;}
+	#purpose.section_07 .width_con .content_wrap .purpose_wrap.planet{background: linear-gradient(-90deg,rgba(0,0,0,0)40%,rgba(0,0,0,1)60%),url(../img/purpose/img_02.png) 50%;background-size: cover;}
+	#purpose.section_07 .width_con .content_wrap .purpose_wrap.sport{background: left 50% top 50% linear-gradient(90deg,rgba(0,0,0,0)40%,rgba(0,0,0,1)60%),url(../img/purpose/img_03.png) 50%;background-size: cover;}
+	#purpose.section_07 .width_con .content_wrap .purpose_wrap{width:100%; margin:0;}
+	#purpose.section_07 .width_con .content_wrap .purpose_wrap .title_con.left{width:calc(50% - 30px); margin:100px 30px;}
+	#purpose.section_07 .width_con .content_wrap .purpose_wrap img{display:none;}
+	#purpose.section_07 .width_con .content_wrap .purpose_wrap.people .title_con.left,
+	#purpose.section_07 .width_con .content_wrap .purpose_wrap.sport .title_con.left{margin:100px 0 100px calc(50% + 15px);}
+	
+	#ourteam.section_08 .width_con ul.four_con li{width:calc(50% - 30px); margin: 15px 15px;}
+	
+	#contactus.section_10 .width_con .contact_box{width:50%;}
+}
+@media all and (min-width:1000px) and (max-width:1239px){
+    .width_con{width: calc(100% - 80px);} /*마진 좌우 : 40*/
+    .six_con{width: calc(100% + 40px); margin: -20px -20px;}
+    .six_con > *{width: calc(25% - 40px); margin: 20px 20px;}
+	
+    #header .width_con ul.nav.nav_02 li {margin: 0 0 0 20px;}
+    #header .width_con ul.nav_02 li a{font-size: 14px !important;}
+    #header {height: 75px;}
+    #header .width_con .btn_home img {padding: 2px;}
+    
+    #visual.section_01 {margin-top: 75px;}
+    #visual.section_01 .width_con .title_con.left {margin: 0;}
+	
+    #borderdeck.section_02 .width_con .title_con.left h4{height:52.5px;}
+	
+    #technology.section_04 .width_con ul.four_con li.wide div.img_con.img_02 img, 
+    #technology.section_04 .width_con ul.four_con li.long div.img_con.img_01 img {opacity:0.6;}
+	
+	#resort.section_03 .width_con .light_width_con .all_icon_con .icon_con .info_con i {font-size:30px;}
+	#resort.section_03 .width_con .title_con.left {padding:60px 0 200px 0}
+	
+	#contactus.section_10 .width_con .contact_box{width:30%;}    
+}
+@media all and (min-width:1240px) and (max-width:1449px){
+    .width_con{width: 1200px;}
+	
+    #header .width_con ul.nav.nav_02 li {margin: 0 0 0 25px;}
+    
+    #visual.section_01 .width_con .title_con.left {margin: 0;}
+    
+    .bottom,
+    #technology.section_04 .width_con ul.four_con li > div{padding:20px !important;}
+    #technology.section_04 .width_con ul.four_con li.wide div.img_con.img_02 img,
+    #technology.section_04 .width_con ul.four_con li.long div.img_con.img_01 img {opacity:0.6;}
+}

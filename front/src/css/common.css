@@ -1,21 +1,22 @@
+html{    
+    font-size:40px;
+}
 body {
     margin: 0;
     overflow-y: hidden;
 }
-header, footer{
-    margin: 0 240px;
-}
+header, footer{}
 h2,h3,h4{line-height:1em;}
 
-
-h2{font-size:25px; font-weight:600;}
-h3{}
-h4{font-size:18px;}
-h5{font-size:12px; line-height:1.5em;}
+h1{font-size:1rem; font-weight:600;}
+h2{font-size:.625rem; font-weight:600;}
+h3{font-size:.5rem;}
+h4{font-size:.45rem;}
+h5{font-size:.3rem; line-height:1.5em;}
 
 .btn_a{position:relative; height:35px; font-size:18px;}
 .btn_a:hover img{transform:translateX(10px);}
-.btn_a img{position:absolute; left:0; bottom:0; transition:all 500ms ease-out;}
+.btn_a img{position:absolute; left:0; bottom:0; transition:all 250ms ease-out;}
 
 /* header */
 .hide{opacity:0; pointer-events:none;}
@@ -40,6 +41,14 @@ header .side_nav_con{
     z-index:9999;
     transition:opacity 250ms ease-out; 
 }
+header .side_nav_con.hide{pointer-events:auto;}
+header .side_nav_con.hide:hover{opacity:1;pointer-events:auto;}
+header .side_nav_con .background{
+    position: absolute;
+    left:0;
+    top:0;
+    z-index:-1;
+}
 header .side_nav_con .cube{
     position:absolute;
     left:0;
@@ -47,7 +56,13 @@ header .side_nav_con .cube{
     transition:all 500ms ease-out;
     transform:translateY(-25%);
 }
-
+header .side_nav_con .dot{
+    width:20px;
+    height:14px;
+    margin:16px 0;
+    cursor:pointer;
+}
+header .side_nav_con .dot:nth-child(1){margin-top:0;}
 
 
 
@@ -83,7 +98,6 @@ margin: 0;
 }
 
 .burger-icon .burger-sticks {
-background: #000;
 display: block;
 height: 2px;
 position: relative;
@@ -101,7 +115,6 @@ position: absolute;
 transition: all .2s ease-out;
 width: 100%;
 }
-#root.white .burger-icon .burger-sticks,
 #root.white .burger-icon .burger-sticks:before,
 #root.white .burger-icon .burger-sticks:after{
     background: #fff;
@@ -173,13 +186,11 @@ footer p {}
     position:relative;
     width:calc(100% + 25px);
     margin:0 -12.5px;
-    height:100%;
     overflow:hidden;
 }
 .three_con li{
     width:calc(33.3333% - 25px);
     margin:0 12.5px;
-    height:100%;
     background:#fff;
     float:left;
 }
