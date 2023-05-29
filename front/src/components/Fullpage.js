@@ -28,6 +28,7 @@ function Fullpage() {
       const pageHeight = window.innerHeight;
       outerDivRef.current.style.height = `${pageHeight}px`;
       outerDivRef.current.style.transform = `translateY(-${pageHeight * (scrollIndex - 1)}px)`;
+      outerDivRef.current.querySelector('.section_03 .map').style.left = '200px';
     };
     const wheelHandler = (e) => {
       e.preventDefault();

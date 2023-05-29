@@ -4,12 +4,9 @@
     .width_con .three_con li {
         width: calc(33.3333% - 20px);
         margin: 0 10px;
-        background: #fff;
-        float: left;
     }
 
 }
-
 @media all and (min-width:769px) and (max-width:1024px){
     html{font-size:30px;}
     .width_con .three_con li {
