@@ -27,9 +27,8 @@ header {
     position: relative;
     height: 100px;
     display: flex; flex-flow: row nowrap; justify-content: center;
-    align-items: end;
+    align-items: flex-end;
 }
-header .line{position:fixed; left:45px; top:0; width:1px; height:100vh; background:#d1d1d1; transition:opacity 250ms ease-out;}
 header h1 {opacity:0; pointer-events:none; transition: 250ms ease-out; transition-delay:250ms;}
 #root.white header h1 {opacity:1; pointer-events:auto; transition: 250ms ease-out; transition-delay:50ms;}
 /* header menu */
@@ -57,12 +56,14 @@ header .side_nav_con .cube{
     transform:translateY(-25%);
 }
 header .side_nav_con .dot{
+    position:relative;
     width:20px;
     height:14px;
     margin:16px 0;
     cursor:pointer;
 }
 header .side_nav_con .dot:nth-child(1){margin-top:0;}
+header .side_nav_con .dot:nth-child(4):before{position:absolute; left:0; top:48%; transform:translate(0,-50%); width:100px; height:4px; content:''; border-radius:2px; background:#F2EDED;}
 
 
 

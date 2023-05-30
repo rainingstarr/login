@@ -10,7 +10,6 @@ const Header = ({ scrollIndex ,pagesLength ,setScrollIndex ,outerDivRef}) => {
         <div className="header_bg">
             <div className="width_con">
                 <header>
-                    <div className={`line ${scrollIndex == 1 || scrollIndex ==6 ? "hide" : ""}`}></div>
                     <input className="burger-check" type="checkbox" id="burger-check" />
                     <label className="burger-icon" htmlFor="burger-check">
                     <span className="burger-sticks"></span>

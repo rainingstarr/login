@@ -6,7 +6,7 @@ function Section06 () {
             <div className='section_06 sections'>
                 <div className="left_line"></div>
                 <div className="image"></div>
-                <div className="propmate_con"><div className="propmate">PROPMATE</div></div>
+                <div className="propmate_con"><img className="propmate" src={process.env.PUBLIC_URL+"images/section_06/image_02.svg"}></img></div>
                 <div className="top_con">
                     <div className="text_con">
                         <div className="mail">
@@ -53,7 +53,7 @@ function Section06 () {
                                 위치기반 서비스 이용약관
                             </h5>
                         </span>
-                        <span className="right bottom ">
+                        <span className="right bottom text_align_right">
                             <h5>
                                 2023ⓒ<br></br>
                                 PROPMATE Corporation.All Rights Reserved. 

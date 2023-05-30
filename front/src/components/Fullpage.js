@@ -38,7 +38,7 @@ function Fullpage() {
       const pageWidth = window.innerWidth;
       const deltaY = e.deltaY;//마우스 휠에서의 수직방향 스크롤 변화량
       const pageHeight = window.innerHeight;//현재page의 height가져옴
-      if(scrollIndex == 3){
+      if(scrollIndex === 3){
         const newLeft = parseInt(map.style.left || '0') - deltaY;
         if(200 >=newLeft && newLeft >= pageWidth-mapWidth){
           map.style.left = `${newLeft}px`;
@@ -53,7 +53,7 @@ function Fullpage() {
       const scrollToTop = pageHeight * (newScrollIndex - 1);
       outerDivRef.current.style = `transform: translateY(-${scrollToTop}px)`;
       setScrollIndex(newScrollIndex);
-      if(newScrollIndex == 1){
+      if(newScrollIndex === 1){
         outerDivRef.current.parentElement.classList.add("white");
       }else{
         outerDivRef.current.parentElement.classList.remove("white");

@@ -111,7 +111,7 @@ html, body {}
     z-index:2;
     pointer-events:none;
 } 
-.section_06 .propmate_con .propmate{position:absolute; left:50%; top:40%; transform:translateX(-50%); font-size:342px; font-weight:800; line-height:1em; letter-spacing:-70px; font-family:'Noto Sans' }
+.section_06 .propmate_con .propmate{position:absolute; left:53.5%; top:46.5%; width:80%; transform:translateX(-50%);}
 .section_06 .width_con{width:100%; height:100%; margin-left:194px;}
 .section_06 .bottom_line{position:absolute; bottom:25px; width:100%; height:1px; background:#000;}
 .section_06 .top_con {position:relative; width:100%; height:47%; padding-left:10%; z-index:1;}
@@ -132,7 +132,7 @@ html, body {}
 .section_06 .left.bottom,
 .section_06 .right.top,
 .section_06 .right.bottom{position:absolute;}
-.section_06 .left.top{left:45px; top:10px;}
-.section_06 .left.bottom{left:45px; bottom:10px;}
-.section_06 .right.top{right:12px; top:10px;}
-.section_06 .right.bottom{right:12px; bottom:10px;}
+.section_06 .left.top{left:20px; top:20px;}
+.section_06 .left.bottom{left:20px; bottom:20px;}
+.section_06 .right.top{right:20px; top:20px;}
+.section_06 .right.bottom{right:20px; bottom:20px;}
