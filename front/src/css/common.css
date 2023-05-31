@@ -12,7 +12,7 @@ h1{font-size:1rem; font-weight:600;}
 h2{font-size:.625rem; font-weight:600;}
 h3{font-size:.5rem;}
 h4{font-size:.45rem;}
-h5{font-size:.3rem; line-height:1.5em;}
+h5{font-size:.325rem; line-height:1.5em;}
 
 .btn_a{position:relative; height:35px; font-size:18px;}
 .btn_a:hover img{transform:translateX(10px);}
@@ -63,7 +63,7 @@ header .side_nav_con .dot{
     cursor:pointer;
 }
 header .side_nav_con .dot:nth-child(1){margin-top:0;}
-header .side_nav_con .dot:nth-child(4):before{position:absolute; left:0; top:48%; transform:translate(0,-50%); width:100px; height:4px; content:''; border-radius:2px; background:#F2EDED;}
+header .side_nav_con .rowLine{position:absolute; left:0; top:36%; transform:translate(0,-50%); width:100px; height:4px; border-radius:2px; background:#F2EDED; transition:all 250ms ease-out;}
 
 
 
@@ -91,8 +91,8 @@ display: inline-block;
 position: absolute;
 z-index: 2;
 padding: 8px 0;
-bottom: 4px;
-left: 4px;
+bottom: 0;
+left: 0;
 user-select: none;
 width: auto;
 margin: 0;

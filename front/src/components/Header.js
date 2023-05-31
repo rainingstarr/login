@@ -29,6 +29,7 @@ const Header = ({ scrollIndex ,pagesLength ,setScrollIndex ,outerDivRef}) => {
                             {Array(pagesLength).fill(0).map((item,index)=>{
                                 return  <div key={index} index={index} className='dot' onClick={clickFunction}></div>
                             })}
+                            <div className={`rowLine ${scrollIndex !== 3 ? "hide" : ""}`}></div>
                             <img src={process.env.PUBLIC_URL+"images/image_bg_01.svg"} className="background"></img>
                             <img src={process.env.PUBLIC_URL+"images/image_cube.svg"} className="cube" style={{top:30*(scrollIndex - 1)+'px'}}></img>
                         </div>

@@ -4,8 +4,8 @@ function Section03 () {
     return(
         <>
             <div className='section_03 sections'>
-                <div className="map"><img src={process.env.PUBLIC_URL+"images/section_03/image_01.jpg"}></img></div>
                 <div className='width_con'>
+                    <div className="map" style={{left:'0'}}><img src={process.env.PUBLIC_URL+"images/section_03/image_01.jpg"}></img></div>
                     <div className='box_con'>
                         <div className='title left'><h2>지도 기반 토지정보</h2></div>
                         <div className='row'></div>
