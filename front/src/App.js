@@ -10,6 +10,7 @@ import Draft from './components/Draft.js';
 import './css/reset.css';
 import './css/common.css';
 import Fullpage from './components/Fullpage.js';
+import FbxViewer from './components/FbxViewer.js';
 
 function App() {
   const [naver]=useState(window.naver);
@@ -24,6 +25,7 @@ function App() {
         <Route path="/join" element={<Join/>}></Route>
         <Route path="/draft" element={<Draft/>}></Route>
         <Route path="/landing" element={<Fullpage/>}></Route>
+        <Route path="/fbxviewer" element={<FbxViewer/>}></Route>
       </Routes>
     </>
   );
