@@ -1,4 +1,4 @@
-html, body {}
+html, body {white-space:nowrap;}
 /* main */
 .section_01{
     background-image: url(../../public/images/mainbnr.jpg); background-size: cover;
