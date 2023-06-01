@@ -11,6 +11,7 @@ import './css/reset.css';
 import './css/common.css';
 import Fullpage from './components/Fullpage.js';
 import FbxViewer from './components/FbxViewer.js';
+import GltfViewer from './components/GltfViewer.js';
 
 function App() {
   const [naver]=useState(window.naver);
@@ -26,6 +27,7 @@ function App() {
         <Route path="/draft" element={<Draft/>}></Route>
         <Route path="/landing" element={<Fullpage/>}></Route>
         <Route path="/fbxviewer" element={<FbxViewer/>}></Route>
+        <Route path="/gltfViewer" element={<GltfViewer/>}></Route>
       </Routes>
     </>
   );
