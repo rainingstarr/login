@@ -35,10 +35,7 @@ function Fullpage() {
       rowLine.style.transform = `translate(0%,-50%)`;
     };
     const scrollEventHandler = (e) => {
-      if(scrolling) return;      
-      setTimeout(() => {
-        scrolling = false;
-      }, 500);
+      if(scrolling) return;
       const mapWidth = map.offsetWidth;
       const pageWidth = window.innerWidth;
       const deltaY = e.deltaY;//마우스 휠에서의 수직방향 스크롤 변화량

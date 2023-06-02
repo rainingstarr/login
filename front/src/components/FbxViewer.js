@@ -1,63 +1,44 @@
+import * as THREE from "three";
 import React, { useEffect, useRef } from 'react';
-import { Canvas, useFrame } from 'react-three-fiber';
-import { OrbitControls, OrthographicCamera } from "@react-three/drei";
-import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
+import { Canvas,useFrame} from 'react-three-fiber';
+import gsap from "gsap";
 
-const Square = () => {
-  const torusRef = useRef();
-  useFrame(() => {
-    torusRef.current.rotation.x += 0.01;
-    torusRef.current.rotation.y += 0.01;
-  });
+const Cube = (prop) => {
+  const cubeRef = useRef(null);
 
-  return (
-    <mesh rotation-x={Math.PI * 0.25} rotation-y={Math.PI * 0.25} ref={torusRef}>
-      <boxGeometry args={[3, 3, 3]} />
-      <meshStandardMaterial color={"blue"} />
-    </mesh>
-  );
-}
-
-
-const FbxModel = () => {
-  const fbxRef = useRef();
-
-  // useFrame(() => {
-  //   if (fbxRef.current) {
-  //     fbxRef.current.rotation.y += 0.01;
+  // useFrame((state)=>{
+  //   if(!cubeRef.current){
+  //     return;
   //   }
-  // });
+  //   const elapsedTime = state.clock.getElapsedTime();
+  //   cubeRef.current.rotation.y += .1;
+  //   state.camera.lookAt(cubeRef.current.position);
+  // })
 
   useEffect(() => {
-    const loader = new FBXLoader();
-    loader.load('/images/test.fbx', (fbx) => {
-      fbx.position.set(0, 0, 1000);
-      fbxRef.current.add(fbx);
-    });
+    if (!cubeRef.current) {
+      return;
+    }
+    gsap.to(cubeRef.current.position, { duration: 1, delay: 1, x: 2 });
+    gsap.to(cubeRef.current.position, { duration: 1, delay: 2, x: 0 });
   }, []);
 
-  return <group ref={fbxRef} />;
+  return (
+    // mesh: 3D공간에 표시할 메쉬.
+    // 즉, 3D오브젝트의 형태와 재질을 합한 것이라고 이해하면 된다.
+    <mesh ref={cubeRef}>
+      <boxGeometry args={[1, 1, 1]} />
+      <meshBasicMaterial color="#e91e63" />
+    </mesh>
+
+  );
 };
 
 const Example = () => {
   return (
-    <Canvas style={{ width: '100%', height: '100vh' }}>
-      <ambientLight intensity={0.5} />
-      <pointLight intensity={0.8} position={[5, 10, 5]} />
-      <Square />
-      <FbxModel />
-      <OrbitControls />
-      <OrthographicCamera
-        makeDefault
-        zoom={.1}
-        top={200}
-        bottom={-200}
-        left={300}
-        right={-300}
-        near={1}
-        far={2000}
-        position={[0, 0, 1000]}
-      />
+    <Canvas camera={{ position: [1, 1, 3]}} style={{width:'100%',height:'100vh'}}>
+      <Cube/>
+      <axesHelper/>
     </Canvas>
   );
 };
